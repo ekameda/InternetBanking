@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "674f320b-8c55-47d1-b0c5-594f97c9e334",
+		"name": "santander",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5012411"
+	},
+	"item": [
+		{
+			"name": "Criar Conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"agencia\": \"1234\",\n    \"nome\": \"Edu\",\n    \"cpf\": \"76345\",\n    \"codigo\": \"110\",\n    \"dataNascimento\": \"2005-06-06\",\n    \"planoExclusivo\": \"true\",\n    \"chave\": \"{{$randomUUID}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/conta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recupera todos Contas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/conta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lancamento de Credito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/conta/2/credito/2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"conta",
+						"2",
+						"credito",
+						"2000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lancamento de Debito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/conta/2/debito/1.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"conta",
+						"2",
+						"debito",
+						"1.5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Clientes / Titulares",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/titular",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"titular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Movimentação",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/conta/2/debito/100.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"conta",
+						"2",
+						"debito",
+						"100.5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
